@@ -1,0 +1,132 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color-scheme: dark;
+  background: #091722;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100svh;
+  background: #091722;
+}
+
+.page {
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  padding: 0;
+}
+
+.poster {
+  position: relative;
+  width: min(100%, 1590px);
+  margin-inline: auto;
+  line-height: 0;
+}
+
+.poster__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.project-links {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hotspot {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  border-radius: 8px;
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hotspot--mejoratuweb {
+  left: 11.2%;
+  top: 19.8%;
+  width: 22.5%;
+  height: 25%;
+}
+
+.hotspot--sistema-maestro-ia {
+  left: 37.4%;
+  top: 4.1%;
+  width: 25.2%;
+  height: 22.8%;
+}
+
+.hotspot--vendeconia {
+  left: 67.4%;
+  top: 18.5%;
+  width: 22.2%;
+  height: 26%;
+}
+
+.hotspot--automatiza-tu-negocio {
+  left: 10.4%;
+  top: 53.8%;
+  width: 25.8%;
+  height: 26.8%;
+}
+
+.hotspot--abrochat {
+  left: 66.8%;
+  top: 53.4%;
+  width: 24%;
+  height: 27.2%;
+}
+
+.hotspot--infovendeconia {
+  left: 38.4%;
+  top: 77.4%;
+  width: 24%;
+  height: 17.6%;
+}
+
+.hotspot:focus-visible {
+  outline: 3px solid #176cff;
+  outline-offset: 1px;
+  background: rgb(23 108 255 / 5%);
+  box-shadow: 0 0 0 5px rgb(255 255 255 / 82%);
+}
+
+.hotspot:hover {
+  outline: 2px solid rgb(23 108 255 / 44%);
+  outline-offset: 1px;
+  background: rgb(23 108 255 / 4%);
+}
+
+@media (max-width: 360px) {
+  .hotspot {
+    min-height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hotspot:focus-visible {
+    transition: outline-offset 120ms ease;
+  }
+}
